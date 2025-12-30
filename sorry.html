@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sorry from Shubham</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:"Segoe UI",sans-serif;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#ffdde1,#ee9ca7);
+    overflow:hidden;
+}
+
+/* floating emojis */
+.emoji-float{
+    position:absolute;
+    font-size:24px;
+    animation: float 8s infinite linear;
+    opacity:0.6;
+}
+
+@keyframes float{
+    from{transform:translateY(100vh);}
+    to{transform:translateY(-10vh);}
+}
+
+/* card */
+.card{
+    background:rgba(255,255,255,0.92);
+    max-width:720px;
+    width:90%;
+    padding:45px;
+    border-radius:20px;
+    box-shadow:0 30px 60px rgba(0,0,0,0.25);
+    text-align:center;
+    backdrop-filter:blur(8px);
+    position:relative;
+    overflow:hidden;
+}
+
+/* pages */
+.page{
+    display:none;
+    animation:slideFade 0.8s ease;
+}
+
+.page.active{
+    display:block;
+}
+
+@keyframes slideFade{
+    from{opacity:0; transform:translateX(40px);}
+    to{opacity:1; transform:translateX(0);}
+}
+
+h1{
+    color:#e63946;
+    font-size:36px;
+}
+
+p{
+    font-size:18px;
+    line-height:1.8;
+    color:#444;
+    margin-bottom:18px;
+}
+
+/* heart */
+.heart{
+    font-size:44px;
+    animation:beat 1.4s infinite;
+}
+
+@keyframes beat{
+    0%,100%{transform:scale(1);}
+    50%{transform:scale(1.25);}
+}
+
+.emoji-big{
+    font-size:90px;
+    margin-bottom:10px;
+    animation:bounce 1.5s infinite;
+}
+
+@keyframes bounce{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-10px);}
+}
+
+/* button */
+button{
+    background:#e63946;
+    color:white;
+    border:none;
+    padding:14px 34px;
+    border-radius:40px;
+    font-size:16px;
+    cursor:pointer;
+    position:relative;
+    overflow:hidden;
+    box-shadow:0 10px 20px rgba(230,57,70,0.4);
+}
+
+button::after{
+    content:"";
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:0;
+    height:0;
+    background:rgba(255,255,255,0.4);
+    border-radius:50%;
+    transform:translate(-50%,-50%);
+    transition:0.5s;
+}
+
+button:hover::after{
+    width:300px;
+    height:300px;
+}
+
+button:hover{
+    background:#c1121f;
+}
+
+/* floating emojis placement */
+.e1{left:10%; animation-delay:0s;}
+.e2{left:25%; animation-delay:2s;}
+.e3{left:50%; animation-delay:4s;}
+.e4{left:75%; animation-delay:6s;}
+.e5{left:90%; animation-delay:1s;}
+
+</style>
+</head>
+<body>
+
+<!-- floating emojis -->
+<div class="emoji-float e1">❤️</div>
+<div class="emoji-float e2">✨</div>
+<div class="emoji-float e3">🌸</div>
+<div class="emoji-float e4">😌</div>
+<div class="emoji-float e5">💫</div>
+
+<div class="card">
+
+<!-- PAGE 1 -->
+<div class="page active" id="page1">
+    <div class="heart">❤️</div>
+    <h1>I Am Sorry</h1>
+
+    <p>Mujhe pata hai maine aapko hurt kiya hai, aur sirf “sorry” keh dene se sab theek nahi hota.</p>
+    <p>Par sach ye hai — aap meri life ke bohot important insaan ho, aur aapki jagah koi aur nahi le sakta.</p>
+    <p>Main dil se maafi maangta hoon, aur main apni galtiyon se seekh raha hoon.</p>
+
+    <button onclick="nextPage()">Next 👉</button>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page" id="page2">
+    <div class="emoji-big">🙄😤</div>
+
+    <p>Bohat bade ho gaye ho na aap? 😌  
+    Dosti <strong>ham dono ne</strong> ki thi…</p>
+
+    <p>Aur todoge <strong>sirf aap</strong>?  
+    Thoda unfair nahi ho gaya? 😒</p>
+
+    <p>Pagal ho aap thode se…  
+    Aur haan, gussa hone ka <strong>poora haq</strong> hai aapko 😤</p>
+
+    <p>Mujhe aapko manane ka <strong>poora adhikaar</strong> hai 😌  
+    Samjhe?</p>
+
+    <p><strong>Aur aapke kehne se main kahin nahi jaunga.</strong> ❤️</p>
+
+    <button onclick="nextPage()">Next 👉</button>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page" id="page3">
+    <div class="emoji-big">😎</div>
+
+    <p>Achha suno… tension mat lo 😌  
+    Main har cheez over kar raha tha, maanta hoon.</p>
+
+    <p>Par ab nahi.  
+    Ab main aapka wahi <strong>SIGMA Shubham</strong> hoon 💪  
+    Wo rotla version nahi 🙂</p>
+
+    <p>New Year aa raha hai 🎉  
+    Naya saal, nayi shuruaat.</p>
+
+    <p>Is saal ka sab yahin chhod ke,  
+    agle saal mein chalte hain — <strong>khushiyon ki taraf</strong> 🌸</p>
+
+    <button onclick="nextPage()">Last 👉</button>
+</div>
+
+<!-- PAGE 4 -->
+<div class="page" id="page4">
+    <div class="emoji-big">🤍</div>
+
+    <p>Mujhe pata hai main piche jaa kar sab kuch badal nahi sakta…</p>
+    <p>Par haan, aage aisa kuch nahi hoga — <strong>yeh mera vaada hai.</strong></p>
+    <p>Bas ek last chance de do 🙏</p>
+    <p><strong>You are precious ❤️</strong></p>
+
+    <div class="heart">❤️</div>
+</div>
+
+</div>
+
+<script>
+let currentPage=1;
+function nextPage(){
+    document.getElementById("page"+currentPage).classList.remove("active");
+    currentPage++;
+    document.getElementById("page"+currentPage).classList.add("active");
+}
+</script>
+
+</body>
+</html>
